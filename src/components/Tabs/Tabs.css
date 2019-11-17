@@ -1,0 +1,32 @@
+.panel-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.c-panel {
+  border: 1px solid var(--blueAccent);
+}
+
+.c-panel a {
+  display: block;
+  padding: 0rem 0.7rem;
+  font-size: 12px;
+  line-height: 27px;
+  color: #3b4351;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.c-panel a:hover {
+  background: var(--lightBlueAccent);
+}
+
+.c-panel + li {
+  margin-left: -1px;
+}
+
+.c-panel.selected a {
+  color: white;
+  background: var(--tertiaryColor);
+}

@@ -1,0 +1,21 @@
+/* Hero */
+.defaultHero {
+  position: relative;
+  height: 344px;
+  background: url("../../images/defaultBcg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  position: relative;
+  height: 450px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.hotel-hero {
+  position: relative;
+  background: #ffffff;
+}

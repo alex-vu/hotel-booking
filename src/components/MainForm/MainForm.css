@@ -1,0 +1,145 @@
+.form-wrap {
+  /* background-color: var(--secondaryColor);
+  padding: 4px; */
+  border-radius: 4px;
+  margin: 24px 0 16px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
+}
+
+.form-group svg {
+  position: absolute;
+  top: 51%;
+  transform: translateY(-50%);
+  left: 15px;
+  z-index: 1;
+  color: #0f71be;
+}
+
+.form-input {
+  width: auto;
+  height: 2.7rem;
+  border: 0;
+  /* border-right: 3px solid var(--secondaryColor);
+  border-radius: 0; */
+  padding: 0.25rem 1.5rem 0.25rem 1.8rem;
+  font-weight: 500;
+  margin: 0 4px;
+}
+
+.form-input::placeholder {
+  color: #383838;
+}
+
+.form-input:focus {
+  border-color: var(--secondaryColor);
+  box-shadow: none;
+}
+
+.form-wrap .form-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-guests {
+  display: flex;
+  align-items: center;
+}
+
+.input-search {
+  background: var(--secondaryColor);
+  color: #3b4351;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.input-search:hover {
+  background: #ffdd00;
+}
+
+.scroll-content {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.menu {
+  position: absolute;
+  width: 259px;
+  margin: 0 4px;
+  padding: 0;
+}
+
+.menu .menu-item {
+  margin: 0;
+  padding: 0.5rem 1.5rem 0.5rem 1.8rem;
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  color: #3b4351;
+}
+
+.menu .suggestion-active,
+.suggestions li:hover {
+  background-color: #f0f0f0;
+  color: #3b4351;
+  cursor: pointer;
+}
+
+.secondary-form .form-wrap {
+  padding: 1rem;
+  background: #0c3c64;
+  box-shadow: none;
+}
+
+.secondary-form .form-wrap .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+
+.secondary-form label {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.secondary-form .form-input {
+  width: 100%;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.secondary-form .input-pad {
+  padding: 0.25rem 1rem 0.25rem 2rem;
+}
+
+.secondary-form .menu {
+  margin: 0;
+}
+
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 960px) {
+  .form-wrap {
+    box-shadow: none;
+  }
+
+  .form-inline {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-input {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 840px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 480px) {
+}

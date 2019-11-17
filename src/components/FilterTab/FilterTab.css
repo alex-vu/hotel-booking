@@ -1,0 +1,86 @@
+.filter {
+  margin-bottom: 30px;
+}
+
+.filter-nav {
+  display: flex;
+}
+
+.chip {
+  display: block;
+  flex: 1 1 25%;
+  text-align: center;
+  border: 3px solid #f0f0f0;
+  background: #f0f0f0;
+  color: #3b4351;
+  font-weight: bold;
+  line-height: 2;
+  text-decoration: none;
+  padding: 15px 10px;
+  cursor: pointer;
+  height: auto;
+  border-radius: 0;
+}
+
+.active-tab {
+  position: relative;
+  /* color: white; */
+  background: var(--secondaryColor);
+  border: 3px solid var(--secondaryColor);
+  overflow: visible;
+}
+
+.active-tab::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  border-top: 10px solid var(--secondaryColor);
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -11px;
+  bottom: -10px;
+}
+
+.filter
+  .filter-tag#tag-1:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-1"]),
+.filter
+  .filter-tag#tag-2:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-2"]),
+.filter
+  .filter-tag#tag-3:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-3"]),
+.filter
+  .filter-tag#tag-4:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-4"]),
+.filter
+  .filter-tag#tag-5:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-5"]),
+.filter
+  .filter-tag#tag-6:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-6"]),
+.filter
+  .filter-tag#tag-7:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-7"]),
+.filter
+  .filter-tag#tag-8:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-8"]) {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .chip {
+    padding: 5px 10px;
+  }
+}

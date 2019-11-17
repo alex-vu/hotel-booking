@@ -1,0 +1,128 @@
+.header {
+  padding: 10px 0;
+  background: var(--primaryColor);
+}
+
+.navbar {
+  align-items: center;
+}
+
+.secondary-nav {
+  justify-content: flex-end;
+}
+
+.btn.btn-link {
+  position: relative;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.25rem 1rem;
+}
+
+.btn.btn-link:focus,
+.btn.btn-link:hover,
+.btn.btn-link:active,
+.btn.btn-link.active {
+  color: var(--secondaryColor);
+}
+
+.btn.btn-link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -26px;
+  width: 100%;
+  height: 0px;
+  background: transparent;
+  z-index: 2;
+  transform: translateY(5px);
+  opacity: 0;
+  transition: height 0.15s ease-in, transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.btn.btn-link:hover::before,
+.btn.btn-link.active::before {
+  height: 5px;
+  background: var(--secondaryColor);
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  list-style-type: none;
+}
+
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainWhite);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0;
+}
+
+.nav-links a:hover {
+  color: var(--secondaryColor);
+}
+
+.show-nav {
+  height: 500px;
+}
+
+.show-nav a {
+  opacity: 1;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+  background: none;
+  border-color: none;
+  color: none;
+}
+
+/* MOBILE MENU & NAV */
+@media screen and (min-width: 961px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 869px) {
+}
+
+@media (max-width: 960px) {
+  .navbar .hide-on-large {
+    display: none;
+  }
+
+  .btn.nav-btn {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .btn.nav-btn,
+  .btn.nav-btn svg {
+    height: 44px;
+    width: 44px;
+  }
+}

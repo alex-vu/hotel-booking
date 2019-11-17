@@ -1,3 +1,47 @@
+/* 
+
+BREAKPOINTS
+
+xl: 1280px
+lg: 960px
+md: 840px
+sm: 600px
+xs: 480px
+
+*/
+
+:root {
+  --primaryColor: #0e3c64;
+  --secondaryColor: #ffc107;
+  --tertiaryColor: #17c422;
+  --quarternaryColor: #ff4907;
+  --blueAccent: #0f71be;
+  --lightBlueAccent: #e1f0fc;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+}
+
+a,
+a:focus,
+a:visited,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +54,243 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.primary-link {
+  display: block;
+  color: #3b4351;
+  line-height: 2.1rem;
+}
+
+.primary-link:visited {
+  color: #3b4351;
+}
+
+.primary-link:hover,
+.primary-link:focus,
+.primary-link:visited {
+  text-decoration: none;
+}
+
+.bg-gray {
+  background: #f2f2f2;
+}
+
+.box-filler {
+  width: 306px;
+  height: 150px;
+  background: var(--primaryColor);
+}
+
+.shelf-container {
+  border-radius: 2px;
+  border: 1px solid #e5e5e5 !important;
+  background-color: #fff;
+}
+
+.icon-text {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.form-checkbox input:checked + .form-icon,
+.form-radio input:checked + .form-icon,
+.form-switch input:checked + .form-icon {
+  background: #2474cd;
+  border-color: #2474cd;
+}
+
+.form-checkbox input:focus + .form-icon,
+.form-radio input:focus + .form-icon,
+.form-switch input:focus + .form-icon,
+input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 0.1rem rgba(36, 116, 205, 0.2);
+}
+
+.form-checkbox .form-icon,
+.form-radio .form-icon,
+.form-switch .form-icon {
+  border: 2px solid #0c3c64;
+}
+
+.vertical-top {
+  vertical-align: top;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.App .br0 {
+  border-right: 0;
+}
+
+.ml50 {
+  margin-left: 50px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.aspect-ratio-box {
+  height: 0;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+
+.aspect-ratio-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio-2x1 {
+  padding-bottom: 50%;
+}
+
+.ratio-16x9 {
+  padding-bottom: 56.25%;
+}
+
+.ratio-4x3 {
+  padding-bottom: 75%;
+}
+
+.ratio-1x1 {
+  padding-bottom: 100%;
+}
+
+.ratio-3x4 {
+  padding-bottom: 133.333%;
+}
+
+.ratio-2x3 {
+  padding-bottom: 150%;
+}
+
+.gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 2;
+}
+
+.ui-button {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  height: 2.7rem;
+  border: 0;
+  line-height: 1.2rem;
+  padding: 0.25rem 1.5rem 0.25rem 1.8rem;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.section-title {
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+.section-title h4 {
+  font-size: 0.8rem;
+  color: #abacac;
+  letter-spacing: 0.033rem;
+  margin-bottom: 0.25rem;
+}
+
+.section-title h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.clr:before,
+.clr:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clr:after {
+  clear: both;
+}
+.clr {
+  zoom: 1;
+} /* IE < 8 */
+
+/* .container.grid-xl {
+  max-width: 1296px;
+}
+.container.grid-lg {
+  max-width: 976px;
+}
+.container.grid-md {
+  max-width: 856px;
+}
+.container.grid-sm {
+  max-width: 616px;
+}
+.container.grid-xs {
+  max-width: 496px;
+} */
+
+.container.grid {
+  max-width: 1296px;
+}
+
+@media (max-width: 1300px) {
+  .container.grid {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 960px) {
+  .container.grid {
+    max-width: 85vw;
+  }
+}
+
+@media (max-width: 840px) {
+}
+
+@media (max-width: 600px) {
+  .container.grid {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
 }

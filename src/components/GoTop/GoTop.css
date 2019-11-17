@@ -1,0 +1,55 @@
+.go-top {
+  background: #0d72be;
+  padding: 45px 0;
+  width: 100%;
+}
+
+.go-top a {
+  padding-top: 2em;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
+.go-top a::before {
+  content: "";
+  height: 0;
+  width: 0;
+  padding: 1.1em;
+  border-left: solid 2px #fff;
+  border-top: solid 2px #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: 0.5em;
+  margin-left: -1.1em;
+}
+
+@media (max-width: 840px) {
+  .logo svg {
+    max-width: 125px;
+  }
+
+  .btn.nav-btn {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .btn.nav-btn,
+  .btn.nav-btn svg {
+    height: 44px;
+    width: 44px;
+  }
+
+  .go-top {
+    padding: 10px 0;
+  }
+
+  .go-top a::before {
+    padding: 0.5em;
+    margin-left: -0.5em;
+  }
+}
